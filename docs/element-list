@@ -1,0 +1,15 @@
+com.GalvanizedGuardians.GuardianLib.Hardware.Controllers
+com.GalvanizedGuardians.GuardianLib.Hardware.Encoders
+com.GalvanizedGuardians.GuardianLib.Hardware.Gyros
+com.GalvanizedGuardians.GuardianLib.Hardware.LEDControllers
+com.GalvanizedGuardians.GuardianLib.Hardware.LEDControllers.Utility
+com.GalvanizedGuardians.GuardianLib.Hardware.Motors
+com.GalvanizedGuardians.GuardianLib.Hardware.Motors.SensorHelpers
+com.GalvanizedGuardians.GuardianLib.Hardware.Motors.Utility
+com.GalvanizedGuardians.GuardianLib.Hardware.Motors.Utility.CTRE
+com.GalvanizedGuardians.GuardianLib.Hardware.Sensors.SpatialSensor
+com.GalvanizedGuardians.GuardianLib.Hardware.Sensors.SpatialSensor.Components
+com.GalvanizedGuardians.GuardianLib.Hardware.Sensors.SpatialSensor.Utility
+com.GalvanizedGuardians.GuardianLib.Logging
+com.GalvanizedGuardians.GuardianLib.Logging.Faults
+com.GalvanizedGuardians.GuardianLib.Utilities
