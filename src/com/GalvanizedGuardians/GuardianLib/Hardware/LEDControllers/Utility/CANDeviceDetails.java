@@ -1,4 +1,4 @@
-package GuardianLib.Hardware.LEDControllers.Utility;
+package com.GalvanizedGuardians.GuardianLib.Hardware.LEDControllers.Utility;
 
 public class CANDeviceDetails {
     

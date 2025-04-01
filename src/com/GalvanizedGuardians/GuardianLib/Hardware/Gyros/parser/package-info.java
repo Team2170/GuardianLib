@@ -1,1 +1,1 @@
-package GuardianLib.Hardware.Gyros.parser;
+package com.GalvanizedGuardians.GuardianLib.Hardware.Gyros.parser;

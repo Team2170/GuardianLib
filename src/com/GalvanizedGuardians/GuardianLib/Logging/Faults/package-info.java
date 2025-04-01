@@ -1,1 +1,1 @@
-package GuardianLib.Logging.Faults;
+package com.GalvanizedGuardians.GuardianLib.Logging.Faults;

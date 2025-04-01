@@ -1,1 +1,1 @@
-package GuardianLib.Hardware.Sensors.ColorSensor;
+package com.GalvanizedGuardians.GuardianLib.Hardware.Sensors.ColorSensor;

@@ -1,1 +1,1 @@
-package GuardianLib.Hardware.Encoders;
+package com.GalvanizedGuardians.GuardianLib.Hardware.Encoders;

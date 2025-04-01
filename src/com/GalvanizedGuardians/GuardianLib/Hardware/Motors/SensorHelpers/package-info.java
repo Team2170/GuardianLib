@@ -1,1 +1,1 @@
-package GuardianLib.Hardware.Motors.SensorHelpers;
+package com.GalvanizedGuardians.GuardianLib.Hardware.Motors.SensorHelpers;

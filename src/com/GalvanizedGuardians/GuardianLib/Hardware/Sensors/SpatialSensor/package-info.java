@@ -1,1 +1,1 @@
-package GuardianLib.Hardware.Sensors.SpatialSensor;
+package com.GalvanizedGuardians.GuardianLib.Hardware.Sensors.SpatialSensor;

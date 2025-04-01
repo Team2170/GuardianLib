@@ -1,1 +1,1 @@
-package GuardianLib.Hardware.Motors.Utility.CTRE;
+package com.GalvanizedGuardians.GuardianLib.Hardware.Motors.Utility.CTRE;

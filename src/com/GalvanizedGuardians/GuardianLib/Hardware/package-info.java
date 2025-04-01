@@ -1,1 +1,1 @@
-package GuardianLib.Hardware;
+package com.GalvanizedGuardians.GuardianLib.Hardware;

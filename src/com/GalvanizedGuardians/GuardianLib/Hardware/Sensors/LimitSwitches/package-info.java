@@ -1,1 +1,1 @@
-package GuardianLib.Hardware.Sensors.LimitSwitches;
+package com.GalvanizedGuardians.GuardianLib.Hardware.Sensors.LimitSwitches;

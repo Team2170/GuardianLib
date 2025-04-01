@@ -1,1 +1,1 @@
-package GuardianLib.Logging;
+package com.GalvanizedGuardians.GuardianLib.Logging;
