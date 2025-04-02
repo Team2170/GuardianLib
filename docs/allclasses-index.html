@@ -15,7 +15,11 @@
 <script type="text/javascript" src="script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="all-classes-index-page">
-<script type="text/javascript">var pathtoroot = "./";
+<script type="text/javascript">var evenRowColor = "even-row-color";
+var oddRowColor = "odd-row-color";
+var tableTab = "table-tab";
+var activeTableTab = "active-table-tab";
+var pathtoroot = "./";
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -50,7 +54,8 @@ loadScripts(document, 'script');</script>
 <h1 title="All Classes and Interfaces" class="title">All Classes and Interfaces</h1>
 </div>
 <div id="all-classes-table">
-<div class="caption"><span>Classes</span></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="all-classes-table-tab0" role="tab" aria-selected="true" aria-controls="all-classes-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('all-classes-table', 'all-classes-table', 2)" class="active-table-tab">All Classes and Interfaces</button><button id="all-classes-table-tab1" role="tab" aria-selected="false" aria-controls="all-classes-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('all-classes-table', 'all-classes-table-tab1', 2)" class="table-tab">Interfaces</button><button id="all-classes-table-tab2" role="tab" aria-selected="false" aria-controls="all-classes-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('all-classes-table', 'all-classes-table-tab2', 2)" class="table-tab">Classes</button><button id="all-classes-table-tab3" role="tab" aria-selected="false" aria-controls="all-classes-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('all-classes-table', 'all-classes-table-tab3', 2)" class="table-tab">Enum Classes</button></div>
+<div id="all-classes-table.tabpanel" role="tabpanel" aria-labelledby="all-classes-table-tab0">
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Class</div>
 <div class="table-header col-last">Description</div>
@@ -80,6 +85,10 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/LEDControllers/CANdleWrapper.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.LEDControllers">CANdleWrapper</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/LEDControllers/CANdleWrapper.Animations.html" title="enum class in com.GalvanizedGuardians.GuardianLib.Hardware.LEDControllers">CANdleWrapper.Animations</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/LEDControllers/CANdleWrapper.CANdleState.html" title="enum class in com.GalvanizedGuardians.GuardianLib.Hardware.LEDControllers">CANdleWrapper.CANdleState</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Sensors/SpatialSensor/Components/CANRange.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Sensors.SpatialSensor.Components">CANRange</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Controllers/ControllerWrapper.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Controllers">ControllerWrapper</a></div>
@@ -114,76 +123,79 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Sensors/SpatialSensor/Components/LaserCAN.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Sensors.SpatialSensor.Components">LaserCAN</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/LEDControllers/LEDControllerIO.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.LEDControllers">LEDControllerIO</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Controllers/Logitech.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Controllers">Logitech</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/LEDControllers/LEDControllerIO.html" title="interface in com.GalvanizedGuardians.GuardianLib.Hardware.LEDControllers">LEDControllerIO</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/LEDControllers/LEDControllerIO.LEDControllerIOInputs.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.LEDControllers">LEDControllerIO.LEDControllerIOInputs</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/Utility/CTRE/MotionMagicWrapper.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors.Utility.CTRE">MotionMagicWrapper</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Controllers/Logitech.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Controllers">Logitech</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/MotorConfigs.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors">MotorConfigs</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/Utility/CTRE/MotionMagicWrapper.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors.Utility.CTRE">MotionMagicWrapper</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/Utility/MotorConfigurator.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors.Utility">MotorConfigurator</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/MotorConfigs.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors">MotorConfigs</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/MotorIO.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors">MotorIO</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/Utility/MotorConfigurator.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors.Utility">MotorConfigurator</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/Neo550Motor.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors">Neo550Motor</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/MotorIO.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors">MotorIO</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/NeoMotor.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors">NeoMotor</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/Neo550Motor.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors">Neo550Motor</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/NeoVortexMotor.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors">NeoVortexMotor</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/NeoMotor.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors">NeoMotor</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/SensorHelpers/NeutralModeWrapper.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors.SensorHelpers">NeutralModeWrapper</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/NeoVortexMotor.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors">NeoVortexMotor</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Controllers/OI.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Controllers">OI</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/SensorHelpers/NeutralModeWrapper.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors.SensorHelpers">NeutralModeWrapper</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Utilities/OperationalMode.html" title="class in com.GalvanizedGuardians.GuardianLib.Utilities">OperationalMode</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Controllers/OI.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Controllers">OI</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/OptionalConfigCTRE.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors">OptionalConfigCTRE</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Utilities/OperationalMode.html" title="class in com.GalvanizedGuardians.GuardianLib.Utilities">OperationalMode</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/OptionalConfigREV.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors">OptionalConfigREV</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/OptionalConfigCTRE.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors">OptionalConfigCTRE</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/Utility/CTRE/PIDControllerWrapper.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors.Utility.CTRE">PIDControllerWrapper</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/OptionalConfigREV.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors">OptionalConfigREV</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Logging/Faults/Pigeon2Faults.html" title="class in com.GalvanizedGuardians.GuardianLib.Logging.Faults">Pigeon2Faults</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/Utility/CTRE/PIDControllerWrapper.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors.Utility.CTRE">PIDControllerWrapper</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Gyros/Pigeon2Gyro.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Gyros">Pigeon2Gyro</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Logging/Faults/Pigeon2Faults.html" title="class in com.GalvanizedGuardians.GuardianLib.Logging.Faults">Pigeon2Faults</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Controllers/PS4ControllerWrapper.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Controllers">PS4ControllerWrapper</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Gyros/Pigeon2Gyro.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Gyros">Pigeon2Gyro</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Controllers/PS5ControllerWrapper.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Controllers">PS5ControllerWrapper</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Controllers/PS4ControllerWrapper.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Controllers">PS4ControllerWrapper</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Sensors/SpatialSensor/Components/REVRangeSensor.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Sensors.SpatialSensor.Components">REVRangeSensor</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Controllers/PS5ControllerWrapper.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Controllers">PS5ControllerWrapper</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Controllers/ReyannController.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Controllers">ReyannController</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Sensors/SpatialSensor/Components/REVRangeSensor.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Sensors.SpatialSensor.Components">REVRangeSensor</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Controllers/ReyannControllerWrapper.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Controllers">ReyannControllerWrapper</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Controllers/ReyannController.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Controllers">ReyannController</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Logging/Faults/RobotFaults.html" title="class in com.GalvanizedGuardians.GuardianLib.Logging.Faults">RobotFaults</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Controllers/ReyannControllerWrapper.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Controllers">ReyannControllerWrapper</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Sensors/SpatialSensor/Components/SENS3006.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Sensors.SpatialSensor.Components">SENS3006</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Logging/Faults/RobotFaults.html" title="class in com.GalvanizedGuardians.GuardianLib.Logging.Faults">RobotFaults</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/SensorHelpers/SensorDirectionWrapper.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors.SensorHelpers">SensorDirectionWrapper</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Sensors/SpatialSensor/Components/SENS3006.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Sensors.SpatialSensor.Components">SENS3006</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Sensors/SpatialSensor/Components/SimTOF.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Sensors.SpatialSensor.Components">SimTOF</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/SensorHelpers/SensorDirectionWrapper.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors.SensorHelpers">SensorDirectionWrapper</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/Utility/SoftwareLimitWrapper.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors.Utility">SoftwareLimitWrapper</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Sensors/SpatialSensor/Components/SimTOF.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Sensors.SpatialSensor.Components">SimTOF</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Logging/Faults/SparkMaxFaults.html" title="class in com.GalvanizedGuardians.GuardianLib.Logging.Faults">SparkMaxFaults</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/Utility/SoftwareLimitWrapper.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors.Utility">SoftwareLimitWrapper</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/SparkMaxMotor.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors">SparkMaxMotor</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Logging/Faults/SparkMaxFaults.html" title="class in com.GalvanizedGuardians.GuardianLib.Logging.Faults">SparkMaxFaults</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Sensors/SpatialSensor/Spatial.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Sensors.SpatialSensor">Spatial</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/SparkMaxMotor.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors">SparkMaxMotor</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Sensors/SpatialSensor/SpatialIO.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Sensors.SpatialSensor">SpatialIO</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Sensors/SpatialSensor/Spatial.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Sensors.SpatialSensor">Spatial</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Sensors/SpatialSensor/SpatialTOF.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Sensors.SpatialSensor">SpatialTOF</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Sensors/SpatialSensor/SpatialIO.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Sensors.SpatialSensor">SpatialIO</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Encoders/ThriftyAbsoluteEncoder.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Encoders">ThriftyAbsoluteEncoder</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Sensors/SpatialSensor/SpatialTOF.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Sensors.SpatialSensor">SpatialTOF</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/ThriftyMotor.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors">ThriftyMotor</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Encoders/ThriftyAbsoluteEncoder.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Encoders">ThriftyAbsoluteEncoder</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Controllers/XboxControllerWrapper.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Controllers">XboxControllerWrapper</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Motors/ThriftyMotor.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Motors">ThriftyMotor</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/GalvanizedGuardians/GuardianLib/Hardware/Controllers/XboxControllerWrapper.html" title="class in com.GalvanizedGuardians.GuardianLib.Hardware.Controllers">XboxControllerWrapper</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+</div>
 </div>
 </div>
 </main>
