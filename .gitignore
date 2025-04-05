@@ -1,5 +1,33 @@
-# Ignore Gradle project-specific cache directory
-.gradle
+# Ignore everything
+*
+!.gitignore
 
-# Ignore Gradle build output directory
-build
+# Folders / Formats used for code
+!.github/
+!.github/**/*
+
+!gradle/
+!gradle/**/*
+
+!pictures/
+!pictures/**/*
+
+!vendordeps/
+!vendordeps/**/*
+
+!src/
+!src/**/*
+
+# Files reauired by gradle
+!build.gradle
+!gradlew
+!gradlew.bat
+!settings.gradle
+
+# Github Files
+!LICENSE
+!README.md
+
+# Files used for JitPack CI
+!.classpath
+!.travis.yml
