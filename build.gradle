@@ -12,7 +12,7 @@ plugins {
    id "com.github.spotbugs" version "5.2.0"
 }
 
-group = 'com.GuardianLib'
+group = 'com.github.Team2170'
 
 java {
    sourceCompatibility = JavaVersion.VERSION_17
@@ -29,6 +29,10 @@ sourceSets {
 
 configurations {
    jaxDoclet
+}
+
+repositories {
+   mavenCentral()
 }
 
 dependencies { 
