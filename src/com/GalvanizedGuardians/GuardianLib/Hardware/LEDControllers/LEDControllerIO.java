@@ -5,11 +5,13 @@
 package com.GalvanizedGuardians.GuardianLib.Hardware.LEDControllers;
 
 import com.GalvanizedGuardians.GuardianLib.Hardware.LEDControllers.CANdleWrapper.CANdleState;
-import org.littletonrobotics.junction.AutoLog;
 
 public interface LEDControllerIO {
-    @AutoLog
+    /**
+     * Represents the I/O inputs for the LED controller, including the current state of the LEDs.
+     */
     public class LEDControllerIOInputs {
+        /** The current state of the LED controller (e.g., OFF, TURNING_CW, etc.). */
         public CANdleState state = CANdleState.OFF;
     }
 

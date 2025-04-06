@@ -4,16 +4,28 @@
 
 package com.GalvanizedGuardians.GuardianLib.Hardware.LEDControllers;
 
+import edu.wpi.first.wpilibj.Timer;
+
 import com.GalvanizedGuardians.GuardianLib.Hardware.LEDControllers.Utility.CANDeviceDetails;
+import com.GalvanizedGuardians.GuardianLib.Logging.Alert;
+import com.GalvanizedGuardians.GuardianLib.Logging.Alert.AlertType;
 import com.GalvanizedGuardians.GuardianLib.Logging.Faults.CANdleFaultsWrapper;
 import com.ctre.phoenix.led.CANdle;
 
 public class CANdleWrapper implements LEDControllerIO {
+    private boolean isEnabled = false;
+
     private CANdle leds;
-    private CANdleState currState;
+    private int ledCount;
+    private CANdleState state = CANdleState.OFF;
     private CANdleFaultsWrapper faults;
     private CANDeviceDetails details;
-    private int ledCount;
+
+    private Alert sensorAlert;
+
+    private Timer timer = new Timer();
+    private double seconds = 1;
+    private double defaultTime = 1;
 
     public enum CANdleState {
         OFF,
@@ -43,7 +55,23 @@ public class CANdleWrapper implements LEDControllerIO {
         public CANdleState state = CANdleState.OFF;
     }
 
-    public CANdleWrapper(CANDeviceDetails details, int ledCount, String CANBus) {
+    public CANdleWrapper(CANDeviceDetails details, int ledCount, String CANbus) {
         this.details = details;
+        int id = details.getDeviceNumber();
+        this.ledCount = ledCount;
+
+        try {
+            leds = new CANdle(id, CANbus);
+            faults = new CANdleFaultsWrapper(leds, id);
+            isEnabled = true;
+        } catch (Exception e) {
+            // Handle exception and set alert for hardware failure
+            AlertType level = AlertType.INFO;
+            sensorAlert = new Alert("LED", "LEDs " + id + " hardware not found", level);
+            sensorAlert.set(true);
+        }
+
+        timer.stop();
+        timer.reset();
     }
 }
