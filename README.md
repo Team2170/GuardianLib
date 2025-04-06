@@ -13,7 +13,7 @@ plugins {
     
     // You can use different versions of GradleRIO between your robot
     // code and Stuylib as long as the updates don't break anything
-    id "edu.wpi.first.GradleRIO" version "2025.2.1"
+    id "edu.wpi.first.GradleRIO" version "2025.3.2"
 }
 ```
 
