@@ -14,5 +14,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Grant execute permission
         run: chmod +x gradlew
-      - name: Build robot code
+      - name: Build libary code
         run: ./gradlew build
+      - name: Publish library code
+        run: ./gradlew build publishToMavenLocal
