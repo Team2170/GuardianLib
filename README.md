@@ -37,7 +37,13 @@ dependencies {
 }
 ```
 
-Step 3. Import the neccessary module into your project
+Step 3. Build the project
+
+```dos
+./gradlew build
+```
+
+Step 4. Import the neccessary module into your project
 
 ```java
 import com.GalvanizedGuardians.GuardianLib.*;
