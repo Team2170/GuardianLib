@@ -17,9 +17,9 @@ public interface LEDControllerIO {
 
     public default void updateInputs(LEDControllerIOInputs inputs) {}
 
-    public default void setLEDS(CANdleState state) {}
+    public default void setLEDs(CANdleState state) {}
 
-    public default void setLEDS(CANdleState state, double seconds) {}
+    public default void setLEDs(CANdleState state, double seconds) {}
 
     public default void periodic() {}
 

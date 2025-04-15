@@ -4,9 +4,8 @@
 
 package com.GalvanizedGuardians.GuardianLib.Logging.Faults;
 
-import edu.wpi.first.wpilibj.Alert.AlertType;
-
 import com.GalvanizedGuardians.GuardianLib.Logging.Alert;
+import com.GalvanizedGuardians.GuardianLib.Logging.Alert.AlertType;
 
 /**
  * Interface for managing hardware fault alerts. Provides methods to activate, deactivate, and check
@@ -24,9 +23,9 @@ public interface FaultsWrapper {
      * Activates a specific alert with a defined severity level.
      *
      * @param alert The alert to activate.
-     * @param type The severity level of the alert.
+     * @param alertType The severity level of the alert.
      */
-    public default void activateAlert(Alert alert, AlertType alterType) {}
+    public default void activateAlert(Alert alert, AlertType alertType) {}
 
     /**
      * Deactivates a specific alert, indicating that the fault condition no longer exists.

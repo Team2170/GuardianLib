@@ -18,7 +18,7 @@ import org.littletonrobotics.junction.Logger;
 
 public class Alert {
     /** Represents an alert's level of urgency. */
-    public static enum AlertType {
+    public enum AlertType {
         /** High priority alert for serious issues requiring immediate attention (red "X"). */
         ERROR,
         /** High priority alert with trace information (red "X"). */
@@ -65,6 +65,7 @@ public class Alert {
      * @param text The message text of the alert.
      * @param type The urgency level of the alert.
      */
+    @SuppressWarnings("java:S3824")
     public Alert(String group, String text, AlertType type) {
         if (!groups.containsKey(group)) {
             groups.put(group, new SendableAlerts());
@@ -130,7 +131,7 @@ public class Alert {
                 DriverStation.reportWarning(text, true);
                 break;
             case INFO:
-                System.out.println(text);
+                DriverStation.reportWarning(text, false);
                 break;
         }
     }
@@ -164,11 +165,14 @@ public class Alert {
          * @param type The alert type to filter.
          * @return An array of active alert strings.
          */
+        @SuppressWarnings("java:S4165")
         public String[] getStrings(AlertType type) {
             List<String> alertStrings = new ArrayList<>();
+
             for (Alert alert : alerts) {
                 alertStrings = getStrings(type, alert, alertStrings);
             }
+
             return alertStrings.toArray(new String[0]);
         }
 

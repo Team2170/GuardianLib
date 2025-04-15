@@ -5,48 +5,50 @@
 package com.GalvanizedGuardians.GuardianLib.Hardware.LEDControllers.Utility;
 
 public class CANDeviceDetails {
+    /** Common manufacturers of CAN Devices. */
     public enum Manufacturer {
-        Unknown, // Unknown vendor
-        Thrifty, // Thrifty vendor
-        Grapple, // Grapple vendor
-        Pwf, // Pwf vendor
-        Redux, // Redux vendor
-        Rev, // Rev vendor
-        CTRE // CTRE vendor
+        THRIFTY, // Thrifty vendor
+        GRAPPLE, // Grapple vendor
+        PWF, // Pwf vendor
+        REDUX, // Redux vendor
+        REV, // Rev vendor
+        CTRE, // CTRE vendor
+        UNKNOWN // Unknown vendor
     }
 
     private final Manufacturer manufacturer;
     private final int deviceNumber;
-    private final String CANbus;
+    private final String CANBus;
     private final String subsystemName;
 
     /**
-     * Constructs a CANDeviceDetails object with the specified device number, CANbus name,
+     * Constructs a CANDeviceDetails object with the specified device number, CANBus name,
      * manufacturer, and subsystem name.
      *
      * @param deviceNumber The unique identifier for the CAN device.
-     * @param CANbus The bus name to which the device is connected.
+     * @param CANBus The bus name to which the device is connected.
      * @param manufacturer The manufacturer of the CAN device.
      * @param subsystemName The name of the subsystem this device is associated with.
      */
+    @SuppressWarnings("java:S116")
     public CANDeviceDetails(
-            int deviceNumber, String CANbus, Manufacturer manufacturer, String subsystemName) {
+            int deviceNumber, String CANBus, Manufacturer manufacturer, String subsystemName) {
         this.deviceNumber = deviceNumber;
-        this.CANbus = CANbus;
+        this.CANBus = CANBus;
         this.manufacturer = manufacturer;
         this.subsystemName = subsystemName;
     }
 
     /**
-     * Constructs a CANDeviceDetails object with the specified device number, CANbus name, and
+     * Constructs a CANDeviceDetails object with the specified device number, CANBus name, and
      * manufacturer.
      *
      * @param deviceNumber The unique identifier for the CAN device.
-     * @param CANbus The bus name to which the device is connected.
+     * @param CANBus The bus name to which the device is connected.
      * @param manufacturer The manufacturer of the CAN device.
      */
-    public CANDeviceDetails(int deviceNumber, String CANbus, Manufacturer manufacturer) {
-        this(deviceNumber, CANbus, manufacturer, "");
+    public CANDeviceDetails(int deviceNumber, String CANBus, Manufacturer manufacturer) {
+        this(deviceNumber, CANBus, manufacturer, "");
     }
 
     /**
@@ -65,7 +67,7 @@ public class CANDeviceDetails {
      * @param deviceNumber The unique identifier for the CAN device.
      */
     public CANDeviceDetails(int deviceNumber) {
-        this(deviceNumber, Manufacturer.Unknown);
+        this(deviceNumber, Manufacturer.UNKNOWN);
     }
 
     public Manufacturer getManufacturer() {
@@ -76,8 +78,8 @@ public class CANDeviceDetails {
         return deviceNumber;
     }
 
-    public String getCANbus() {
-        return CANbus;
+    public String getCANBus() {
+        return CANBus;
     }
 
     public String getSubsystemName() {
@@ -91,9 +93,10 @@ public class CANDeviceDetails {
      * @return {@code true} if the device numbers, bus, manufacturer, and subsystem name are all the
      *     same; {@code false} otherwise.
      */
+    @SuppressWarnings("java:S1201")
     public boolean equals(CANDeviceDetails other) {
         return other.deviceNumber == deviceNumber
-                && other.CANbus.equals(CANbus)
+                && other.CANBus.equals(CANBus)
                 && other.manufacturer == manufacturer
                 && other.subsystemName.equals(subsystemName);
     }
