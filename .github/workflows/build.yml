@@ -20,5 +20,3 @@ jobs:
         run: ./gradlew spotlessApply
       - name: Build library code
         run: ./gradlew build
-      - name: Publish library code
-        run: ./gradlew build publishToMavenLocal
