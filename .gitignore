@@ -17,6 +17,7 @@
 
 !src/
 !src/**/*
+!examples/
 
 # Files reauired by gradle
 !build.gradle
