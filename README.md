@@ -1,6 +1,6 @@
 # Galvanized Guardians Library
 
-A customized library for [Team 2170](https://github.com/Team2170).
+A customized library for [Team 2170](https://github.com/Team2170) containing much simplification for our year-to-year robot code. Allows us to get up and running quickly at the beginning of the year.
 
 # How do I use GuardianLib?
 
