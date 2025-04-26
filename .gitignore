@@ -15,8 +15,8 @@
 !vendordeps/
 !vendordeps/**/*
 
-!src/
-!src/**/*
+!GalvanizedGuardians/
+!GalvanizedGuardians/**/*
 
 !examples/
 !examples/**/*
