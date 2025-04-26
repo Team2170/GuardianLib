@@ -2,9 +2,9 @@
 /* This work is licensed under the terms of the MIT license */
 /* found in the root directory of this project. */
 
-package GuardianLib.Hardware.LEDControllers;
+package com.GalvanizedGuardians.GuardianLib.Hardware.LEDControllers;
 
-import GuardianLib.Hardware.LEDControllers.LEDControllerIO.LEDControllerIOInputs;
+import com.GalvanizedGuardians.GuardianLib.Hardware.LEDControllers.LEDControllerIO.LEDControllerIOInputs;
 
 /**
  * Represents a base LED controller that interacts with an LED controller hardware interface. It
@@ -16,12 +16,10 @@ public class BaseLEDController {
     private final String name;
 
     /**
-     * Constructs a BaseLedController instance with the specified name and LED
-     * controller interface.
+     * Constructs a BaseLedController instance with the specified name and LED controller interface.
      *
      * @param name The name of the LED controller.
-     * @param io   The LED controller input/output interface to interact with the
-     *             hardware.
+     * @param io The LED controller input/output interface to interact with the hardware.
      */
     public BaseLEDController(String name, LEDControllerIO io) {
         this.name = name;
@@ -29,16 +27,15 @@ public class BaseLEDController {
     }
 
     /**
-     * Periodically updates the LED controller inputs by calling the corresponding
-     * method from the I/O interface.
+     * Periodically updates the LED controller inputs by calling the corresponding method from the
+     * I/O interface.
      */
     public void periodic() {
         io.updateInputs(inputs);
     }
 
     /**
-     * Checks for faults in the LED controller by calling the corresponding method
-     * from the I/O
+     * Checks for faults in the LED controller by calling the corresponding method from the I/O
      * interface.
      */
     public void checkForFaults() {
