@@ -26,7 +26,7 @@ public class CommandReyannController extends CommandGenericHID {
     /**
      * Get the underlying GenericHID object.
      *
-     * @return the wrapped GenericHID object
+     * @return {@link ReyannController} the wrapped GenericHID object
      */
     @Override
     public ReyannController getHID() {
@@ -36,10 +36,10 @@ public class CommandReyannController extends CommandGenericHID {
     /**
      * Constructs a Trigger instance around the specified button's digital signal.
      *
-     * @param button The button index, starting from 1
-     * @return a Trigger instance representing the specified button's digital signal attached to the
-     *     {@link CommandScheduler#getDefaultButtonLoop() default scheduler button loop}.
-     * @see #a(EventLoop)
+     * @param button The button index, starting from 1.
+     * @return A {@link Trigger} instance representing the specified button's digital signal
+     *     attached to the {@link CommandScheduler#getDefaultButtonLoop() default scheduler button
+     *     loop}.
      */
     public Trigger getButtonTrigger(int button) {
         return button(button, CommandScheduler.getInstance().getDefaultButtonLoop());
@@ -48,10 +48,10 @@ public class CommandReyannController extends CommandGenericHID {
     /**
      * Constructs a Trigger instance around the specified button's digital signal.
      *
-     * @param button The button index, starting from 1
+     * @param button The button index, starting from 1.
      * @param loop the event loop instance to attach the event to.
-     * @return a Trigger instance representing the A button's digital signal attached to the given
-     *     loop.
+     * @return A {@link Trigger} instance representing the A button's digital signal attached to the
+     *     given loop.
      */
     public Trigger getButtonTrigger(int button, EventLoop loop) {
         return button(button, loop);

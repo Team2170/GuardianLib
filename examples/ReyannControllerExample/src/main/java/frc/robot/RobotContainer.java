@@ -43,16 +43,6 @@ public class RobotContainer {
   private void configureBindings() {
     // Schedule `exampleMethodCommand` when the Reyann Controller's 3rd button is pressed,
     // cancelling on release.
-    reyannController.getButtonTrigger(1).whileTrue(m_exampleSubsystem.exampleMethodCommand());
-  }
-
-  /**
-   * Use this to pass the autonomous command to the main {@link Robot} class.
-   *
-   * @return the command to run in autonomous
-   */
-  public Command getAutonomousCommand() {
-    // An example command will be run in autonomous
-    return Autos.exampleAuto(m_exampleSubsystem);
+    // reyannController.getButtonTrigger(1).whileTrue(m_exampleSubsystem.exampleMethodCommand());
   }
 }
