@@ -46,7 +46,7 @@ dependencies {
 ### Step 4. Import the neccessary module into your project
 
 ```java
-import com.GalvanizedGuardians.GuardianLib.*;
+import GuardianLib.*;
 ```
 
 ## Known Errors

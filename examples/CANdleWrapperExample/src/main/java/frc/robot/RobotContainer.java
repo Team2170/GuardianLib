@@ -9,11 +9,11 @@ import frc.robot.commands.Autos;
 import frc.robot.commands.ExampleCommand;
 import frc.robot.subsystems.ExampleSubsystem;
 
-import com.GalvanizedGuardians.GuardianLib.Hardware.LEDControllers.CANdleWrapper;
-import com.GalvanizedGuardians.GuardianLib.Hardware.LEDControllers.CANdleWrapper.CANdleState;
-import com.GalvanizedGuardians.GuardianLib.Hardware.LEDControllers.Utility.CANDeviceDetails;
-import com.GalvanizedGuardians.GuardianLib.Hardware.LEDControllers.Utility.CTREBuiltInAnimations;
-import com.GalvanizedGuardians.GuardianLib.Hardware.LEDControllers.Utility.CANDeviceDetails.Manufacturer;
+import GuardianLib.Hardware.LEDControllers.CANdleWrapper;
+import GuardianLib.Hardware.LEDControllers.CANdleWrapper.CANdleState;
+import GuardianLib.Hardware.LEDControllers.Utility.CANDeviceDetails;
+import GuardianLib.Hardware.LEDControllers.Utility.CTREBuiltInAnimations;
+import GuardianLib.Hardware.LEDControllers.Utility.CANDeviceDetails.Manufacturer;
 import com.ctre.phoenix.led.CANdle;
 
 import edu.wpi.first.wpilibj2.command.Command;
