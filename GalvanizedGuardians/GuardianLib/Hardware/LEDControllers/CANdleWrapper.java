@@ -92,6 +92,7 @@ public class CANdleWrapper implements LEDControllerIO {
     }
 
     /**
+<<<<<<< HEAD:GalvanizedGuardians/GuardianLib/Hardware/LEDControllers/CANdleWrapper.java
      * Sets the LED state to the specified CANdle state. This method will not
      * automatically turn off
      * the LEDs; it will persist until explicitly set to a different state. Must
@@ -99,6 +100,12 @@ public class CANdleWrapper implements LEDControllerIO {
      * animation you are using before calling this method via
      * {@link #setStateAnimation(CANdleState,
      * Animation)} otherwise animation will be null.
+=======
+     * Sets the LED state to the specified CANdle state. This method will not automatically turn off
+     * the LEDs; it will persist until explicitly set to a different state. Must instantiate the
+     * animation you are using before calling this method via {@link #setStateAnimation(CANdleState,
+     * Animation)}
+>>>>>>> parent of 208a365 (Update CANdleWrapper.java):src/com/GalvanizedGuardians/GuardianLib/Hardware/LEDControllers/CANdleWrapper.java
      *
      * @param state The custom animation state to set on the LEDs.
      */
@@ -111,6 +118,7 @@ public class CANdleWrapper implements LEDControllerIO {
             return;
         }
 
+        // Core animation logic
         if (this.state != state) {
             leds.animate(null); // Wipe old state when setting new one
         }
