@@ -1,0 +1,41 @@
+name: Restrict Issue Closing
+
+on:
+  issues:
+    types: [closed]
+
+jobs:
+  restrict_closing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check closer identity
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const allowedUsers = ['JesseW2158', 'Darksharkthe1st']; // Add allowed usernames here
+
+            const closer = context.payload.sender.login;
+            const issueNumber = context.payload.issue.number;
+            const repo = context.repo.repo;
+            const owner = context.repo.owner;
+
+            if (!allowedUsers.includes(closer)) {
+              console.log(`Unauthorized user "${closer}" tried to close issue #${issueNumber}. Reopening...`);
+
+              await github.rest.issues.update({
+                owner,
+                repo,
+                issue_number: issueNumber,
+                state: 'open'
+              });
+
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: issueNumber,
+                body: `⚠️ @${closer}, you are not authorized to close issues. This issue has been reopened.`
+              });
+            } else {
+              console.log(`Issue closed by authorized user: ${closer}`);
+            }
