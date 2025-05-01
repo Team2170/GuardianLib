@@ -16,7 +16,5 @@ jobs:
         run: chmod +x gradlew
       - name: Clean library code
         run: ./gradlew clean
-      - name: Apply Spotless to library code
-        run: ./gradlew spotlessApply
       - name: Build library code
         run: ./gradlew build
