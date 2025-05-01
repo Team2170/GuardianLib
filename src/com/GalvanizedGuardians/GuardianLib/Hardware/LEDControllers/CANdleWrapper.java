@@ -93,8 +93,8 @@ public class CANdleWrapper implements LEDControllerIO {
     /**
      * Sets the LED state to the specified CANdle state. This method will not automatically turn off
      * the LEDs; it will persist until explicitly set to a different state. Must instantiate the
-     * animation you are using before calling this method via {@link #setStateAnimation(CANdleState,
-     * Animation)}
+     * animation you are using before calling this method via {@link
+     * #setStateAnimation(CANdleState,Animation)}
      *
      * @param state The custom animation state to set on the LEDs.
      */
@@ -166,91 +166,185 @@ public class CANdleWrapper implements LEDControllerIO {
         faults.hasFaultOccured();
     }
 
+    /**
+     * Tells the user if the LED is enabled or not
+     *
+     * @return a boolean of the on/off state of the LED
+     */
     public boolean isEnabled() {
         return isEnabled;
     }
 
+    /**
+     * sets the LED on/off
+     *
+     * @param isEnabled true for on, false for off
+     */
     public void setEnabled(boolean isEnabled) {
         this.isEnabled = isEnabled;
     }
 
+    /** @return the total amount of LEDS on a strip/wrapper */
     public int getLedCount() {
         return ledCount;
     }
 
+    /** @param ledCount sets the # of LEDS per strip on this */
     public void setLedCount(int ledCount) {
         this.ledCount = ledCount;
     }
 
+    /**
+     * gets the LEDS object
+     *
+     * @return the leds (NOT COLOR OR ON/OFF STATE)
+     */
     public CANdle getLeds() {
         return leds;
     }
 
+    /**
+     * Sets the LEDS object
+     *
+     * @param leds what the leds are being set to (NOT COLOR OR ON/OFF STATE)
+     */
     @SuppressWarnings("java:S1845")
     public void setLeds(CANdle leds) {
         this.leds = leds;
     }
 
+    /** @return the state of the CANdle */
     public CANdleState getState() {
         return state;
     }
 
+    /** @param state sets the state of the CANdle */
     public void setState(CANdleState state) {
         this.state = state;
     }
 
+    /**
+     * Retrieves the CANdleFaultsWrapper object used to monitor hardware faults.
+     *
+     * @return The CANdleFaultsWrapper instance.
+     */
     public CANdleFaultsWrapper getFaults() {
         return faults;
     }
 
+    /**
+     * Sets the CANdleFaultsWrapper object used to monitor hardware faults.
+     *
+     * @param faults The CANdleFaultsWrapper instance to set.
+     */
     public void setFaults(CANdleFaultsWrapper faults) {
         this.faults = faults;
     }
 
+    /**
+     * Retrieves the CAN device details for this CANdle instance.
+     *
+     * @return The CANDeviceDetails object.
+     */
     public CANDeviceDetails getDetails() {
         return details;
     }
 
+    /**
+     * Sets the CAN device details for this CANdle instance.
+     *
+     * @param details The CANDeviceDetails to set.
+     */
     public void setDetails(CANDeviceDetails details) {
         this.details = details;
     }
 
+    /**
+     * Gets the animation array mapped to each CANdleState.
+     *
+     * @return An array of animations
+     */
     public Animation[] getCANdleStateAnimations() {
         return CANdleStateAnimations;
     }
 
+    /**
+     * Sets the animation array mapped to each CANdleState.
+     *
+     * @param cANdleStateAnimations An array of animations
+     */
     public void setCANdleStateAnimations(Animation[] cANdleStateAnimations) {
         CANdleStateAnimations = cANdleStateAnimations;
     }
 
+    /**
+     * Retrieves the alert associated with LED hardware detection failure.
+     *
+     * @return The Alert instance for this CANdle.
+     */
     public Alert getSensorAlert() {
         return sensorAlert;
     }
 
+    /**
+     * Sets the alert associated with LED hardware detection failure.
+     *
+     * @param sensorAlert The Alert instance to set.
+     */
     public void setSensorAlert(Alert sensorAlert) {
         this.sensorAlert = sensorAlert;
     }
 
+    /**
+     * Gets the internal timer used for animation durations.
+     *
+     * @return The Timer instance.
+     */
     public Timer getTimer() {
         return timer;
     }
 
+    /**
+     * Sets the internal timer used for animation durations.
+     *
+     * @param timer The Timer instance to use.
+     */
     public void setTimer(Timer timer) {
         this.timer = timer;
     }
 
+    /**
+     * Gets the number of seconds an animation is intended to play.
+     *
+     * @return Duration in seconds.
+     */
     public double getSeconds() {
         return seconds;
     }
 
+    /**
+     * Sets the number of seconds an animation should play.
+     *
+     * @param seconds Duration in seconds.
+     */
     public void setSeconds(double seconds) {
         this.seconds = seconds;
     }
 
+    /**
+     * Gets the default time used if no specific duration is set.
+     *
+     * @return Default animation duration in seconds.
+     */
     public double getDefaultTime() {
         return defaultTime;
     }
 
+    /**
+     * Sets the default time used for animations if no specific duration is provided.
+     *
+     * @param defaultTime Duration in seconds.
+     */
     public void setDefaultTime(double defaultTime) {
         this.defaultTime = defaultTime;
     }
