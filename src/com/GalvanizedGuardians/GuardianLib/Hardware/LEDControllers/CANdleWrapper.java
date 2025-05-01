@@ -91,7 +91,10 @@ public class CANdleWrapper implements LEDControllerIO {
     }
 
     /**
-     * Sets the LED state to the specified CANdle state. This method will not automatically turn off the LEDs; it will persist until explicitly set to a different state. Must instantiate the animation you are using before calling this method via {@link #setStateAnimation(CANdleState,Animation)}
+     * Sets the LED state to the specified CANdle state. This method will not automatically turn off
+     * the LEDs; it will persist until explicitly set to a different state. Must instantiate the
+     * animation you are using before calling this method via {@link
+     * #setStateAnimation(CANdleState,Animation)}
      *
      * @param state The custom animation state to set on the LEDs.
      */
@@ -115,7 +118,8 @@ public class CANdleWrapper implements LEDControllerIO {
     }
 
     /**
-     * Sets the LED state to the specified CANdle state and duration. This method allows specifying how long the animation should play.
+     * Sets the LED state to the specified CANdle state and duration. This method allows specifying
+     * how long the animation should play.
      *
      * @param state The animation state to set on the LEDs.
      * @param seconds The duration in seconds for the animation.
@@ -129,7 +133,8 @@ public class CANdleWrapper implements LEDControllerIO {
     }
 
     /**
-     * Set a custom LED animation for each custom state of the robot. This method will not automatically turn off the LEDs; it will persist until explicitly set to a different state.
+     * Set a custom LED animation for each custom state of the robot. This method will not
+     * automatically turn off the LEDs; it will persist until explicitly set to a different state.
      *
      * @param state The custom animation state of the robot
      * @param animation The animation to play for the custom state
@@ -139,7 +144,8 @@ public class CANdleWrapper implements LEDControllerIO {
     }
 
     /**
-     * Periodically checks the timer and updates the LED state. This method is typically called in the robot's periodic function.
+     * Periodically checks the timer and updates the LED state. This method is typically called in
+     * the robot's periodic function.
      */
     @Override
     public void periodic() {
@@ -152,7 +158,8 @@ public class CANdleWrapper implements LEDControllerIO {
     }
 
     /**
-     * Checks for any faults that may have occurred in the CANdle hardware. If any faults are detected, they are logged or alerted.
+     * Checks for any faults that may have occurred in the CANdle hardware. If any faults are
+     * detected, they are logged or alerted.
      */
     @Override
     public void checkForFaults() {
@@ -161,7 +168,7 @@ public class CANdleWrapper implements LEDControllerIO {
 
     /**
      * Tells the user if the LED is enabled or not
-     * 
+     *
      * @return a boolean of the on/off state of the LED
      */
     public boolean isEnabled() {
@@ -170,30 +177,26 @@ public class CANdleWrapper implements LEDControllerIO {
 
     /**
      * sets the LED on/off
-     * 
+     *
      * @param isEnabled true for on, false for off
      */
     public void setEnabled(boolean isEnabled) {
         this.isEnabled = isEnabled;
     }
 
-    /**
-     * @return the total amount of LEDS on a strip/wrapper
-     */
+    /** @return the total amount of LEDS on a strip/wrapper */
     public int getLedCount() {
         return ledCount;
     }
 
-    /**
-     * @param ledCount sets the # of LEDS per strip on this
-     */
+    /** @param ledCount sets the # of LEDS per strip on this */
     public void setLedCount(int ledCount) {
         this.ledCount = ledCount;
     }
 
     /**
      * gets the LEDS object
-     * 
+     *
      * @return the leds (NOT COLOR OR ON/OFF STATE)
      */
     public CANdle getLeds() {
@@ -202,7 +205,7 @@ public class CANdleWrapper implements LEDControllerIO {
 
     /**
      * Sets the LEDS object
-     * 
+     *
      * @param leds what the leds are being set to (NOT COLOR OR ON/OFF STATE)
      */
     @SuppressWarnings("java:S1845")
@@ -210,32 +213,28 @@ public class CANdleWrapper implements LEDControllerIO {
         this.leds = leds;
     }
 
-    /**
-     * @return the state of the CANdle
-     */
+    /** @return the state of the CANdle */
     public CANdleState getState() {
         return state;
     }
 
-    /**
-     * @param state sets the state of the CANdle
-     */
+    /** @param state sets the state of the CANdle */
     public void setState(CANdleState state) {
         this.state = state;
     }
 
-     /**
+    /**
      * Retrieves the CANdleFaultsWrapper object used to monitor hardware faults.
-     * 
+     *
      * @return The CANdleFaultsWrapper instance.
      */
     public CANdleFaultsWrapper getFaults() {
         return faults;
     }
 
-     /**
+    /**
      * Sets the CANdleFaultsWrapper object used to monitor hardware faults.
-     * 
+     *
      * @param faults The CANdleFaultsWrapper instance to set.
      */
     public void setFaults(CANdleFaultsWrapper faults) {
@@ -253,7 +252,7 @@ public class CANdleWrapper implements LEDControllerIO {
 
     /**
      * Sets the CAN device details for this CANdle instance.
-     * 
+     *
      * @param details The CANDeviceDetails to set.
      */
     public void setDetails(CANDeviceDetails details) {
@@ -262,14 +261,14 @@ public class CANdleWrapper implements LEDControllerIO {
 
     /**
      * Gets the animation array mapped to each CANdleState.
-     * 
+     *
      * @return An array of animations
      */
     public Animation[] getCANdleStateAnimations() {
         return CANdleStateAnimations;
     }
 
-      /**
+    /**
      * Sets the animation array mapped to each CANdleState.
      *
      * @param cANdleStateAnimations An array of animations
@@ -278,7 +277,7 @@ public class CANdleWrapper implements LEDControllerIO {
         CANdleStateAnimations = cANdleStateAnimations;
     }
 
-      /**
+    /**
      * Retrieves the alert associated with LED hardware detection failure.
      *
      * @return The Alert instance for this CANdle.
@@ -296,7 +295,7 @@ public class CANdleWrapper implements LEDControllerIO {
         this.sensorAlert = sensorAlert;
     }
 
-      /**
+    /**
      * Gets the internal timer used for animation durations.
      *
      * @return The Timer instance.
@@ -305,7 +304,7 @@ public class CANdleWrapper implements LEDControllerIO {
         return timer;
     }
 
-      /**
+    /**
      * Sets the internal timer used for animation durations.
      *
      * @param timer The Timer instance to use.
@@ -314,7 +313,7 @@ public class CANdleWrapper implements LEDControllerIO {
         this.timer = timer;
     }
 
-     /**
+    /**
      * Gets the number of seconds an animation is intended to play.
      *
      * @return Duration in seconds.
@@ -323,7 +322,7 @@ public class CANdleWrapper implements LEDControllerIO {
         return seconds;
     }
 
-     /**
+    /**
      * Sets the number of seconds an animation should play.
      *
      * @param seconds Duration in seconds.
@@ -332,7 +331,7 @@ public class CANdleWrapper implements LEDControllerIO {
         this.seconds = seconds;
     }
 
-     /**
+    /**
      * Gets the default time used if no specific duration is set.
      *
      * @return Default animation duration in seconds.
@@ -341,7 +340,7 @@ public class CANdleWrapper implements LEDControllerIO {
         return defaultTime;
     }
 
-     /**
+    /**
      * Sets the default time used for animations if no specific duration is provided.
      *
      * @param defaultTime Duration in seconds.
