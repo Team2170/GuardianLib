@@ -8,8 +8,7 @@ import edu.wpi.first.wpilibj2.command.button.CommandJoystick;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 
 /**
- * Wrapper class for the EightBitDo controller using WPILib's CommandJoystick.
- * This class provides
+ * Wrapper class for the EightBitDo controller using WPILib's CommandJoystick. This class provides
  * mappings for the controller's axes, buttons, and D-Pad.
  */
 @SuppressWarnings("java:S115")
@@ -26,8 +25,7 @@ public class EightBitDo implements ControllerWrapper {
     public static final int rightXAxis = 4;
 
     /**
-     * Constructs an EightBitDo controller wrapper with mappings for joystick axes
-     * and buttons.
+     * Constructs an EightBitDo controller wrapper with mappings for joystick axes and buttons.
      *
      * @param port the port the controller is connected to.
      */

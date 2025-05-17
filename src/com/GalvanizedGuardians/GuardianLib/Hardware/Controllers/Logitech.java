@@ -8,8 +8,7 @@ import edu.wpi.first.wpilibj2.command.button.CommandJoystick;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 
 /**
- * Wrapper class for the Logitech controller using WPILib's CommandJoystick.
- * This class provides
+ * Wrapper class for the Logitech controller using WPILib's CommandJoystick. This class provides
  * mappings for the controller's axes, buttons, and D-Pad.
  */
 @SuppressWarnings("java:S115")
@@ -26,8 +25,7 @@ public class Logitech implements ControllerWrapper {
     public static final int rightXAxis = 2;
 
     /**
-     * Constructs a Logitech controller wrapper with mappings for joystick axes and
-     * buttons.
+     * Constructs a Logitech controller wrapper with mappings for joystick axes and buttons.
      *
      * @param port the port the controller is connected to.
      */
@@ -66,8 +64,7 @@ public class Logitech implements ControllerWrapper {
     }
 
     /**
-     * Gets a placeholder trigger for the left trigger. This is a non-functional
-     * placeholder.
+     * Gets a placeholder trigger for the left trigger. This is a non-functional placeholder.
      *
      * @return a Trigger object for the left trigger.
      */
@@ -77,8 +74,7 @@ public class Logitech implements ControllerWrapper {
     }
 
     /**
-     * Gets a placeholder trigger for the right trigger. This is a non-functional
-     * placeholder.
+     * Gets a placeholder trigger for the right trigger. This is a non-functional placeholder.
      *
      * @return a Trigger object for the right trigger.
      */

@@ -9,10 +9,8 @@ import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 
 /**
- * A wrapper class for the Xbox controller that implements the
- * {@link ControllerWrapper} interface.
- * This class provides standardized access to joystick axes and button triggers
- * for the Xbox
+ * A wrapper class for the Xbox controller that implements the {@link ControllerWrapper} interface.
+ * This class provides standardized access to joystick axes and button triggers for the Xbox
  * controller.
  */
 @SuppressWarnings("java:S116")
@@ -30,8 +28,7 @@ public class XboxControllerWrapper extends CommandXboxController implements Cont
     public final int RightYAxis = XboxController.Axis.kRightY.value;
 
     /**
-     * Constructs an Xbox controller wrapper for the specified port. The wrapper
-     * includes access to
+     * Constructs an Xbox controller wrapper for the specified port. The wrapper includes access to
      * left and right joysticks, POV controls, and button mappings (Y, B, A, X).
      *
      * @param port the port the Xbox controller is connected to.
