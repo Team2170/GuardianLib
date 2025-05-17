@@ -10,6 +10,7 @@ import com.GalvanizedGuardians.GuardianLib.Hardware.LEDControllers.LEDController
  * Represents a base LED controller that interacts with an LED controller hardware interface. It
  * periodically updates the LED controller inputs and checks for faults.
  */
+@SuppressWarnings("unused")
 public class BaseLEDController {
     private final LEDControllerIO io;
     private final LEDControllerIOInputs inputs = new LEDControllerIOInputs();
