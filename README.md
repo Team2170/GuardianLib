@@ -55,4 +55,12 @@ import com.GalvanizedGuardians.GuardianLib.*;
 
 Try closing and reopening your IDE.
 
-## For all other errors, please open a issue or contact us directly
+### For all other errors, please open a issue or contact us directly
+
+## If you'd like to contribute, please be sure to use the [WPILib installation](https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html) and run the following commands before submitting a pull request
+
+```dos
+./gradlew clean
+./gradlew SpotlessApply
+./gradle build
+```
