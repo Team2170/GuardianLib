@@ -29,7 +29,8 @@ public class PS4ControllerWrapper extends CommandPS4Controller implements Contro
 
     /**
      * Constructs a PS4 controller wrapper for the specified port. The wrapper includes access to
-     * left and right joysticks, POV controls, and button mappings (Triangle, Circle, Cross, Square).
+     * left and right joysticks, POV controls, and button mappings (Triangle, Circle, Cross,
+     * Square).
      *
      * @param port the port the PS4 controller is connected to.
      */
