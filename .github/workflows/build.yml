@@ -10,11 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     container: wpilib/roborio-cross-ubuntu:2024-22.04
     steps:
-      - name: Debug Maven Access
-        run: curl -I https://maven.reduxrobotics.com/com/reduxrobotics/frc/ReduxLib-java/2025.0.1/ReduxLib-java-2025.0.1.pom
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Grant execute permission
         run: chmod +x gradlew
+      - name: Clean library code
+        run: ./gradlew clean
+      - name: Spotless Apply
+        run: ./gradlew SpotlessApply
       - name: Build library code
         run: ./gradlew build
