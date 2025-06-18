@@ -62,5 +62,5 @@ Try closing and reopening your IDE.
 ```dos
 ./gradlew clean
 ./gradlew SpotlessApply
-./gradle build
+./gradlew build
 ```
