@@ -4,4 +4,8 @@
 
 package com.GalvanizedGuardians.GuardianLib.Hardware.Encoders;
 
+/**
+ * A base class for interacting with an encoder using the {@link EncoderIO} interface. This class
+ * provides methods for configuring the encoder, retrieving its position, and managing faults.
+ */
 public class BaseEncoder {}

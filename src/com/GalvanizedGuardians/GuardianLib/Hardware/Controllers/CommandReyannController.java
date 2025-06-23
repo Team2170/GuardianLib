@@ -11,6 +11,7 @@ import edu.wpi.first.wpilibj2.command.button.Trigger;
 
 /** A version of {@link ReyannController} with {@link Trigger} factories for command-based. */
 public class CommandReyannController extends CommandGenericHID {
+    @SuppressWarnings("java:S116")
     private final ReyannController m_hid;
 
     /**

@@ -4,4 +4,4 @@
 
 package com.GalvanizedGuardians.GuardianLib.Hardware.Encoders;
 
-public class CANCodersWrapper {}
+public class CANCoderWrapper {}
